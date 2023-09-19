@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;800&display=swap');
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+    height: auto;
+   margin-top: 40px;
+    background-color: rgb(233 234 239);
+    /* height: 70vh; */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .content {
+    
+    flex: 1; 
+    max-width: 50%;}
+  
+  .imagecontainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+   flex-wrap: wrap;
+   overflow: hidden;
+  position: relative;
+    width: 100%; 
+    height: 650px;
+  }
+
+  .img {
+    
+    object-fit: cover;
+    position: absolute;
+    top: 50;
+    left: 100%; 
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    animation: imageTransition 1s ease forwards;
+    
+  }
+  @keyframes imageTransition {
+    50% {
+        left: 50%; 
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 10% 100%); 
+    }
+    to {
+        left: 0; 
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+  
+
+  .herotitle{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+   
+      -webkit-animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+              animation: slide-in-bottom 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+
+    font-family: 'Noto Sans', sans-serif;
+   
+    
+    text-align: left;
+    line-height: 51px;
+    letter-spacing: 0px;
+    font-weight: 800;
+    font-size: 47px;
+    
+    margin-bottom: 25px;
+
+  }
+
+  .desc{
+   
+    color: rgb(45, 42, 42);
+    text-decoration: none;
+    
+   
+    text-align: inherit;
+    line-height: 28px;
+    letter-spacing: .5px;
+    font-weight: 600;
+    font-size: 23px;
+    /* transform-origin: 50% 50%;
+    
+    transform: translate(0px, 0px); */
+    
+  }
+  .hfix{
+    height: 80%;
+  }
+ 
+  
+  
+  
+
+  @media (max-width: 800px) {
+
+    .content{
+      max-width: 100%;
+      margin:auto;  
+      padding-top: 30px; 
+padding-right: 10px;     }
+    .herotitle {
+      font-size: 36px; /* Decrease the font size for smaller devices */
+    }
+  }
+  
+
+
+  

@@ -1,0 +1,1301 @@
+/* Global Styles and Variables */
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Global Colors */
+  --noto-font:'Noto Sans', sans-serif;
+
+  --bgcolor:rgba(21, 36, 93, 1);
+  --button-color: #081441;
+  --bg: #081441;
+  --primary-color: rgb(9, 11, 44);
+  --secondary-font: "Lato", sans-serif;
+  --primary-font: "Poppins", sans-serif;
+  --merri-font: "Merriweather Sans", sans-serif;
+}
+
+
+/* Body Styles */
+body {
+  color: rgb(30, 30, 30);
+  margin: auto;
+  overflow-x: hidden;
+  
+}
+
+/* Product section design starts */
+.productBox {
+  justify-content: center;
+}
+
+.point li {
+  font-family: var(--secondary-font);
+}
+
+.contentContainer {
+  padding: 0px 16px;
+  max-width: 596px;
+}
+
+/* Button styles */
+.btn {
+  background: var(--button-color);
+  font-family: var(--primary-font);
+  letter-spacing: 1px;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 42px;
+}
+
+.tag {
+  z-index: 10;
+  padding: 5px 10px;
+  max-height: 25px;
+  margin-left: -48px;
+  margin-top: 25px;
+  left: auto;
+  font-size: 12px;
+  min-width: 50px;
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.2;
+  background-color: var(--primary-color);
+  font-family: "Lato", sans-serif;
+}
+
+.price {
+  font-family: var(--secondary-font);
+}
+
+/* Magnify effect styles */
+#magnifying_img {
+  --zoom-factor: 2;
+}
+
+.imgbox {
+  /* padding: 0px 16px; */
+}
+
+figure {
+  /* width: 597px; */
+  /* height: 611px; */
+  overflow: hidden;
+  border: 3px solid #fff;
+  position: relative;
+  cursor: grab;
+}
+
+figure img {
+  max-width: 100%;
+  min-width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* z-index: 10; */
+  pointer-events: none;
+}
+
+/* Slider section design starts */
+.slider-menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.slider-menu button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+
+.slider-menu button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 20px;
+  transition: color 0.3s ease;
+}
+
+.slider-menu button.active {
+  color: var(--button-color);
+}
+
+.slider-content > div {
+  display: none;
+}
+
+.slider-content > div.show {
+  display: block;
+}
+
+.section-description {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+}
+
+.section-additional-info {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-family: var(--primary-font);
+}
+
+.section-reviews {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  color: rgb(52, 52, 52);
+}
+
+.about {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+.des {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  padding: 2px 14px;
+  max-width: 1200px;
+  font-family: var(--secondary-font);
+}
+
+.adi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tab-button {
+  position: relative;
+  transition: 0.3s ease;
+  color: rgb(77, 77, 77);
+  font-family: var(--primary-font);
+}
+.ichover{
+ width: calc(100% - 25px);
+ 
+}
+
+.tab-button::before {
+  content: "";
+  position: absolute;
+  background: #081441;
+  width: 0%;
+  height: 3px;
+  bottom: 48px;
+  left: -3px;
+  transition: 0.2s ease-in;
+}
+
+.tab-button.active::before {
+  width: 100%;
+  opacity: 1;
+  /* Visible when active */
+}
+
+/* Slider section design ends */
+
+/* Media queries */
+@media (max-width: 640px) {
+  .title {
+    font-size: 20px;
+  }
+
+  figure {
+    width: 480px;
+    padding: 0px 5px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .price span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .tab-button::before {
+    bottom: 71px;
+  }
+}
+
+
+
+
+
+
+/* dropdown menu */
+
+.browse {
+  color: rgb(255, 255, 255);
+  height: 50px;
+  width: 22%;
+  background-color: rgb(29, 29, 98);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  margin-left: 1%;
+  min-width: 150px;
+  z-index:50;
+}
+
+
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  width: 18%;
+  min-width: 150px;
+  list-style: none;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+  position:absolute;
+  align-self: first baseline;
+  margin-top:50px ;
+  
+  transition: all 1s ease-in;
+
+}
+.browse:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  font-family: var(--secondary-font);
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li:hover {
+  background-color: #f1f1f1;
+}
+
+
+.browsee {
+  color: rgb(255, 255, 255);
+  height: 50px;
+  width: 22%;
+  background-color: rgb(29, 29, 98);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  margin-left: 1%;
+  min-width: 150px;
+}
+
+.dropdownn-content {
+  display: none;
+  background-color: #f9f9f9;
+  width: 18%;
+  min-width: 150px;
+  list-style: none;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start the dropdown outside of the screen */
+  height: 100%;
+  overflow-y: auto;  
+  transition: left 0.3s ease-in-out; 
+  z-index: 2000; 
+}
+
+/* Show the menu when it's open */
+.dropdownn-content.open {
+  display: block;
+  left: 0; /* Slide the menu from the left when it's open */
+}
+
+.dropdownn-content a {
+  font-family: var(--secondary-font);
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownn-content li:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+
+
+
+/* --generics-- */
+.bglight{
+  background-color: var(--bgcolor);
+  color: white;
+}
+
+.latofont{
+  font-family: var(--secondary-font);
+}
+.bluebg{
+  color: white;
+  background-color: var(--bg);
+}
+.blackbg{
+  background-color:black;
+ 
+  margin-bottom: 40px;
+
+
+}
+
+.ind{
+  /* z-index: 50000; */
+}
+.popinsfont{
+  font-family: var(--primary-font)
+}
+  .merrifont{
+    font-family: var(--merri-font);
+
+  }
+  
+
+  .noto-font{
+    font-family:var(--noto-font)
+  }
+  .herobtn{
+    z-index: 1;
+    background-color: rgb(6, 0, 79);
+    font-family: var(--primary-font);
+    height: auto;
+    width: auto;
+    color: rgb(255, 255, 255);
+   
+    line-height: 47px;
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 29px;
+    border-radius: 25px;
+    padding-right: 29px;
+    
+    
+  }
+
+  .darkbg{
+    background-color: var(--primary-color);
+  }
+
+
+
+
+
+
+
+
+
+/* SideMenu.css */
+
+
+
+/* Basic styles for the side menu */
+.side-menu {
+  position: fixed;
+  overflow-y: auto;
+  font-family: var(--secondary-font);
+  
+  top: 0;
+  left: -300px; /* 
+  width: 300px; /* Adjust this value based on your menu width */
+  height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+  z-index: 2000; 
+}
+
+/* Styles for the open state of the side menu */
+.side-menu.open {
+  left: 0;
+}
+
+/* Basic styles for the background overlay */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); 
+  z-index: 1000; 
+}
+
+
+
+.active {
+  background-color: #bababa; /* Darker background color */
+  border-bottom: 2px solid rgb(3, 3, 103); /* Blue border bottom */
+   
+}
+
+
+/* Styles for the list items */
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-menu li {
+  padding: 15px; /* Adjust the padding as needed */
+  border-top: 1px solid #ddd; /* Border at the top of each menu item */
+  border-bottom: 1px solid #ddd; /* Border at the bottom of each menu item */
+  cursor: pointer;
+  font-family: var(--secondary-font);
+}
+
+/* Styles for the links inside the list items */
+.side-menu li a {
+  color: black ;
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/* Hover styles for the links */
+.side-menu li a:hover {
+  color: #595959;
+}
+
+
+
+
+
+
+
+
+/* ****Featured categories style**** */
+.imgcont {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.imgcont img {
+  transition:all .5s ease;
+  display: block;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  
+}
+.hov{
+  cursor: pointer;
+  margin-bottom: 20px;
+  
+}
+
+.hov:hover img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.topSocials.sticky {
+  position: sticky;
+  top: 0;
+  transition: all 0.3s ease;
+}
+.social-title {
+  transition: all 0.3s ease;
+}
+
+
+
+.slide-in-left {
+	-webkit-animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-left 0.9s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+ @-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+/* globals.css */
+.hide-p {
+  display: none;
+}
+
+ul.sticky-left {
+  width: min-content; /* Set the ul width to fit its contents */
+}
+
+ul.sticky-left li:hover p {
+  display: inline-block;
+}
+
+ul.sticky-left li:hover svg {
+  width: 40px; /* Adjust the width of the icon when hovering */
+}
+
+
+.fbg{
+  background-color: #365493;
+}
+
+.tbg{
+  background-color: #3CF;
+}
+.mbg{
+ background-color:  #F89A1E;
+}
+
+.ibg{
+  background-color: #774430;
+}
+.wbg{
+  background-color: #1EBEA5;
+}
+
+
+.social-icon {
+  position: relative;
+}
+
+.social-title {
+  position: absolute;
+  left: 68px;
+  transform: translateX(-50%);
+  padding: 0rem 0.5rem;
+  background-color: inherit;
+  color: white;
+  font-size: 14px;
+  font-family: var(--secondary-font);
+  height: 36px;
+  width: 85px;
+  transition: all 0.3s ease;
+  display: none; /* Corrected from display: hidden; */
+  align-items: center;
+}
+
+
+
+
+/* To hide the title initially and show it on hover */
+.social-icon:hover .social-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.social-icon {
+  position: relative;
+}
+
+
+
+
+
+.vlr{
+  color: red;
+}
+
+
+.relative {
+  position: relative;
+}
+
+/* .border-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: var(--button-color); 
+  transition: width 0.3s ease; 
+} */
+
+
+
+.af::after {
+  content: "";
+  position: absolute;
+  background: #081441;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: width 0.2s ease-in;
+}
+
+.af:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+.af:active::after {
+  width: 100%;
+  opacity: 1;
+}
+
+
+.activeaf::after{
+  content: "";
+  position: absolute;
+  background: #081441;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: width 0.2s ease-in;
+
+}
+
+
+/* ----shop by category section---- */
+.navv{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    text-align: left;
+    
+}
+
+.shoptitle{
+  font-size: 65px;
+}
+
+
+/* ???wallet design/// */
+
+.balancebox{
+
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: #483DE0;
+  color: white;
+ 
+ 
+  
+
+  
+}
+
+.ptitle {
+  transform: translateX(-14.375rem) translateY(-50%);
+}
+
+
+.balcont{
+  background-color:#F6F5FD; 
+  padding: 0;
+    margin: 28px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #F6F5FD;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.active-tab {
+  background-color: #E5E3FA;
+  cursor: pointer; 
+}
+
+
+
+/*Cart CSS*/
+.cart-icon{
+  font-size: 25px;
+  color: gray;
+  cursor: pointer;
+  position: relative;
+  transition: transform .4s ease;
+  border: none;
+  background-color: transparent;
+}
+.cart-icon:hover{
+  transform: scale(1.1,1.1);
+}
+.cart-item-qty{
+  position: absolute;
+  right: -8px;
+  font-size: 12px;
+  color: #eee;
+  background-color: #f02d34;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 600;
+
+}
+.cart-wrapper{
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  /* will-change: transform; */
+  transition: all 1s ease-in-out;
+
+}
+.cart-container{
+  height: 100vh;
+  width: 380px;
+  background-color: white;
+  float: right;
+  padding: 40px 10px;
+  position: relative;
+  
+}
+.cart-heading{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  gap: 2px;
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+}
+
+.cart-heading .heading{
+  margin-left: 10px;
+}
+.cart-num-items{
+  margin-left: 10px;
+  color: #f02d34;
+}
+.empty-cart{
+  margin:40px;
+  text-align:center;
+}
+.empty-cart h3{
+  font-weight: 600;
+  font-size: 20px;
+}
+.cancel{
+  cursor: pointer;
+}
+.product-container{
+  margin-top: 15px;
+  overflow: auto;
+max-height: 70vh;
+padding: 20px 10px;
+}
+.product{
+  display: flex;
+ gap: 15px;
+  padding: 20px;
+  flex-direction: row;
+}
+.product .cart-product-image{
+ 
+  height: 80px;
+
+ background-color: #ebebeb;
+}
+.item-desc .flex{
+  display: flex;
+  justify-content: space-between;
+
+   color: #324d67;
+
+}
+
+.quantity-desc{
+  border: 1px solid gray;
+padding: 6px;
+}
+.quantity-desc span{
+  font-size: 16px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+
+
+.con{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+/* ****Slider*** */
+
+/* Google Fonts - Poppins */
+
+
+/* 
+.container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-container {
+  margin: 0 30px;
+  overflow: hidden;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+}
+.card .image-box {
+  height: 200px;
+}
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.card .profile-details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 15px;
+}
+.card .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.profile-details .name {
+  font-size: 15px;
+  font-weight: 500;
+}
+.profile-details .job {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+
+.swiper-navBtn {
+  color: #000;
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 18px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
+} */
+
+
+
+.swiper {
+  width: 100%;
+  min-height: 420px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80% !important;
+}
+
+/* swiper-custom.css */
+
+/* Target the pagination container */
+.mySwiper .swiper-pagination {
+  margin-top: 20px;
+}
+
+
+.mySwiper .swiper-button-prev,
+.mySwiper .swiper-button-next {
+  display: none;
+  transition: all ease-in .3s;
+  color: white;
+  font-size: 10px;
+  height: 10px;
+  top: 150px !important;
+  
+}
+
+.swiper-button-prev:after, .swiper-button-next:after{
+  font-size: 28px !important;
+  transition: all ease-in .3s !important;
+}
+
+/* Show navigation arrows on hover */
+.mySwiper:hover .swiper-button-prev,
+.mySwiper:hover .swiper-button-next {
+  display: block;
+  transition: all ease-in .3s;
+}
+
+.ha{
+  position: relative;
+}
+.ha::after{
+  content: '';
+  position: absolute;
+  margin-top: 2px;
+  width: 44px;
+  height: 2px;
+  top: 44px;
+  left: 0;
+  background-color: #081441;
+
+
+
+}
+
+
+
+
+.dark-bag {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quick-view-box {
+  width: 950px;
+  height: 461px;
+  background-color: #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 999999999999;
+}
+
+.quick-view-content {
+  padding: 20px;
+ 
+}
+
+.quick-view-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  /* Add more styles for the close button */
+}
+.slide-in-bottom {
+	-webkit-animation: slide-in-bottom 0.15s ease-in-out both;
+	        animation: slide-in-bottom 0.15s ease-in-out both;
+}
+
+
+
+@keyframes slide-in-bottom {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+/* Add this to your CSS */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 11px 107px;
+  z-index: 100000000; /* Adjust the z-index value as needed */
+  background-color: white; /* Set the background color for the sticky navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a raised effect */
+}
+
+.stickymob {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 11px 10px;
+  z-index: 100000000; /* Adjust the z-index value as needed */
+  background-color: white; /* Set the background color for the sticky navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a raised effect */
+  /* height: max-content; Remove this line */
+  height: auto; /* Use auto height to allow content to determine the height */
+}
+
+
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.6s ease-in-out both;
+	        animation: slide-in-top 0.6s ease-in-out both;
+}
+
+
+
+ @-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+.sidebar-container {
+  position: relative;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Styles for the dropdown trigger */
+.dropdown-trigger {
+  margin: 0;
+  padding: 0;
+}
+
+/* Show the sidebar when hovering over the trigger */
+.cursor-pointer:hover .sidebar {
+  display: block;
+}
+
+/* Styles for the sidebar content */
+.sidebar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  min-width: 200px; /* Adjust the width as needed */
+  z-index: 1;
+}
+
+/* Additional styling for the sidebar content */
+.sidebar p {
+  margin: 0;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+
+/* Style for the dropdown trigger */
+/* Hide the dropdown initially */
+.dropdown-menu {
+  display: none;
+  right: -28px;
+    top: 44px;
+}
+
+/* Show the dropdown when its parent is hovered */
+.brow:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+
+
+
+
+/* Responsive breakpoint: When the screen width is less than 768px */
+@media (max-width: 767px) {
+  .flex-row {
+    flex-direction: column; /* Change the direction to column layout */
+  }
+  
+  /* Adjust sidebar and main content widths for better spacing */
+  .flex-grow {
+    width: 100%; /* Take up full width */
+  }
+
+  .ml-6 {
+    margin-left: 0.75rem; /* Adjust spacing for better readability */
+  }
+  
+  .mt-16 {
+    margin-top: 1rem; /* Adjust spacing for better readability */
+  }
+}
+
+
+.hero-bg{
+  /* background-image: url("/public/bg.jpg");
+   */
+
+   background-color: #bbfacf;
+  
+  /* height: 90vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; */
+}
+
+.navv-toggle{
+  display: none;
+}
+
+/* Add these CSS rules to your stylesheet */
+/* Add these styles in your CSS */
+@media (max-width: 1080px) {
+  .navv {
+    flex-direction: column;
+    display: none;
+    justify-content: start;
+    align-items: start;
+  }
+  
+  .navv.open {
+    display: flex;
+  }
+  
+  .navv-toggle {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  .shoptitle{
+   font-size: 40px;
+  }
+}
+
+
+/* Add this to your CSS */
+.abstract-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ff00cc, #3333ff); /* Use your preferred background style */
+  opacity: 0; /* Initially transparent */
+  pointer-events: none; /* Allow interactions with elements behind */
+  z-index: -1; /* Place behind other content */
+  transition: opacity 0.5s ease; /* Add a smooth transition */
+}
+/* Add this to your CSS */
+.visible {
+  opacity: 1; /* Make the background visible */
+}
+
+
+
